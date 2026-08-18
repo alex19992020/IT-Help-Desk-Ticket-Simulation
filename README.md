@@ -25,3 +25,6 @@ This is the format I will use to document each ticket.
 ### What I Learned
 [Key takeaway — what would you do faster next time?]
 
+
+I've been going through Jira to learn the basics of this ticketing system, I've created my own project on jira along with my first ticket that I will be solving soon.  
+<img width="1882" height="697" alt="image" src="https://github.com/user-attachments/assets/6f920c02-aec1-4286-b820-ecd62a9778e2" />
