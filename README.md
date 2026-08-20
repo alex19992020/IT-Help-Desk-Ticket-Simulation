@@ -33,3 +33,37 @@ I've been going through Jira to learn the basics of this ticketing system, I've 
 
 As you can see below, I've updated the ticket by assigning it to myself and transitioning it into in progress.
 <img width="1553" height="416" alt="image" src="https://github.com/user-attachments/assets/8d1c7621-c1ec-4783-93ff-2aad8fdbe045" />
+
+## Ticket #001 — User Cannot Log In (Account Lockout)
+
+**Category:** Account Management
+**Priority:** High
+**Status:** Resolved
+
+### Problem
+User reported being unable to log into their computer 
+with multiple password attempts failing.
+
+### Environment
+DC01 — Active Directory Users and Computers
+DC01 — Event Viewer
+
+### Steps Taken
+1. Assigned ticket and changed status to In Progress in Jira
+2. Checked Jane Smith's account in Active Directory — 
+   found account was locked out
+3. Verified in Event Viewer — found multiple Event ID 
+   4625 failed logon attempts
+4. Unlocked account in Active Directory
+5. Reset password and enabled "must change at next logon"
+6. Verified fix by logging into Client01 as jsmith
+
+### Resolution
+Account was locked out due to multiple failed login 
+attempts. Unlocked account and reset password. User 
+was able to log in successfully.
+
+### What I Learned
+Always check AD first for account lockouts before 
+assuming it's a password issue. Event Viewer confirms 
+how many attempts were made and from which machine.
