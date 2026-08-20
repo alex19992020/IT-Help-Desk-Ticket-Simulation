@@ -67,3 +67,7 @@ was able to log in successfully.
 Always check AD first for account lockouts before 
 assuming it's a password issue. Event Viewer confirms 
 how many attempts were made and from which machine.
+
+Below is the ticket updated showing that it was resolved.
+<img width="988" height="503" alt="image" src="https://github.com/user-attachments/assets/1eac35b5-d84e-46a9-9e08-eee22558bb38" />
+
