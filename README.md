@@ -82,6 +82,19 @@ especially after employees return from extended leave. Event Viewer Failure Reas
 Here's me resolving the ticket and adding an internal note for the manager to read and understand why the ticket was closed,
 <img width="790" height="763" alt="image" src="https://github.com/user-attachments/assets/92456bef-14a3-40ca-9a09-b665b59e2e66" />
 
+The next ticket I received was an onboarding one,
+
+TICKET #003
+Priority: Medium
+Reporter: John Doe (IT)
+Type: Service Request
+
+"Hey, we just hired a new employee named Sarah Connor who will be joining the Sales team next Monday. Can you set up her account and make sure she has access to everything the Sales team has access to. Her username should be sconnor. Thanks"
+
+Below is the ticket I've created in jira and assigned to myself,
+<img width="1342" height="269" alt="image" src="https://github.com/user-attachments/assets/59c67192-4c51-49c6-a7e0-b81f46652cd9" />
+
+
 
 
 
