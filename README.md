@@ -94,6 +94,42 @@ Type: Service Request
 Below is the ticket I've created in jira and assigned to myself,
 <img width="1342" height="269" alt="image" src="https://github.com/user-attachments/assets/59c67192-4c51-49c6-a7e0-b81f46652cd9" />
 
+## Ticket #003 — New Employee Account Setup (Onboarding)
+
+**Category:** Account Management
+**Priority:** Medium
+**Status:** Resolved
+
+### Problem
+New employee Sarah Connor joining Sales team on Monday needs a domain account set up with access to Sales 
+team resources.
+
+### Environment
+DC01 — Active Directory Users and Computers
+
+### Steps Taken
+1. Assigned ticket and changed status to In Progress in Jira
+2. Created new user account in Sales OU with username sconnor
+3. Set temporary password with "must change at next logon" enabled for security
+4. Created Sales-Team security group in Sales OU
+5. Added Sarah Connor to Sales-Team group so she inherits Sales team resource access
+6. Verified account on Client01 — password change prompt appeared correctly and user reached desktop 
+   successfully after setting new password
+
+### Resolution
+New user account created in correct OU with proper group membership. Account verified and ready for 
+employee's first day Monday.
+
+### What I Learned
+Onboarding tickets aren't just about creating an account — you need to make sure the user is in the 
+right OU and the right security groups so they have access to everything their team has from day one. 
+A user in the wrong OU or missing from their department group will be missing resources on their first day 
+which creates more tickets.
+
+Like before I closed the ticket and left a note of why the ticket was closed for my manager to see.
+
+
+
 
 
 
