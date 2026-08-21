@@ -1,33 +1,3 @@
-# IT-Help-Desk-Ticket-Simulation
-
-This is the format I will use to document each ticket.
-
-## Ticket #001 — [Short Title]
-
-**Category:** Account Management / Network / Hardware / etc.
-**Priority:** Low / Medium / High
-**Status:** Resolved
-
-### Problem
-[What the user reported]
-
-### Environment
-[Where you worked — DC01, Client01, AD, etc.]
-
-### Steps Taken
-1. [First thing you did and why]
-2. [Second thing you did and why]
-3. [Continue for each step]
-
-### Resolution
-[What fixed it and why it worked]
-
-### What I Learned
-[Key takeaway — what would you do faster next time?]
-
-
--------------------------------------------------------------------------------------------------
-
 I've been going through Jira to learn the basics of this ticketing system, I've created my own project on Jira along with my first ticket that I will be solving soon.  
 <img width="1882" height="697" alt="image" src="https://github.com/user-attachments/assets/6f920c02-aec1-4286-b820-ecd62a9778e2" />
 
@@ -70,4 +40,49 @@ how many attempts were made and from which machine.
 
 Below is the ticket updated showing that it was resolved.
 <img width="988" height="503" alt="image" src="https://github.com/user-attachments/assets/1eac35b5-d84e-46a9-9e08-eee22558bb38" />
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+TICKET #002
+Priority: Medium
+Reporter: Mike Jones (Sales)
+Type: Service Request
+
+I've created a new ticket that I've assigned to me on jira as seen below, 
+<img width="1361" height="196" alt="image" src="https://github.com/user-attachments/assets/00052c95-01e4-474c-af22-11529216f85c" />
+
+## Ticket #002 — User Cannot Log In (Account Expiration)
+
+**Category:** Account Management
+**Priority:** Medium
+**Status:** Resolved
+
+### Problem
+User reported being unable to log in after returning from a two week vacation. Multiple login attempts 
+failed despite using correct password.
+
+### Environment
+DC01 — Active Directory Users and Computers
+DC01 — Event Viewer
+
+### Steps Taken
+1. Assigned ticket and changed status to In Progress in Jira
+2. Checked Mike Jones account in Active Directory — found account expiration date was set to August 18th which had already passed
+3. Verified in Event Viewer — Event ID 4625 confirmed login failures with account expiration as failure reason
+4. Updated account expiration date to Never in AD Account tab — Mike is a permanent employee with no need for expiration date
+5. Verified fix by logging into Client01 as mjones successfully
+
+### Resolution
+Account had expired while user was on vacation. Updated expiration date to Never. User was able to log in successfully.
+
+### What I Learned
+Not all login failures are lockouts. Always check the Account tab in AD properties — expiration dates are easy to miss but a common cause of login issues 
+especially after employees return from extended leave. Event Viewer Failure Reason field confirms the exact cause of login failures.
+
+Here's me resolving the ticket and adding an internal note for the manager to read and understand why the ticket was closed,
+<img width="790" height="763" alt="image" src="https://github.com/user-attachments/assets/92456bef-14a3-40ca-9a09-b665b59e2e66" />
+
+
+
+
 
