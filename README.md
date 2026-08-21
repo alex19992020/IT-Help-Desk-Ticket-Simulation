@@ -82,6 +82,8 @@ especially after employees return from extended leave. Event Viewer Failure Reas
 Here's me resolving the ticket and adding an internal note for the manager to read and understand why the ticket was closed,
 <img width="790" height="763" alt="image" src="https://github.com/user-attachments/assets/92456bef-14a3-40ca-9a09-b665b59e2e66" />
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 The next ticket I received was an onboarding one,
 
 TICKET #003
@@ -127,6 +129,55 @@ A user in the wrong OU or missing from their department group will be missing re
 which creates more tickets.
 
 Like before I closed the ticket and left a note of why the ticket was closed for my manager to see.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+New ticket assigned to me below,
+<img width="1515" height="168" alt="image" src="https://github.com/user-attachments/assets/67c722b8-d5ab-4bfc-9331-e72217ff6580" />
+
+## Ticket #004 — Missing H: Drive on New Computer
+
+**Category:** Network / Account Access
+**Priority:** High
+**Status:** Resolved
+
+### Problem
+User reported H: drive missing on new computer. 
+Previously had automatic H: drive mapping on old 
+computer but new computer shows nothing.
+
+### Environment
+Client01 — System Properties
+DC01 — Group Policy Management
+
+### Steps Taken
+1. Assigned ticket and changed status to In Progress in Jira
+2. Investigated issue — user could log in fine so not an account issue
+3. Identified root cause — new computer had not been joined to corp.local domain
+4. Opened sysdm.cpl as Administrator on new computer
+5. Changed Member of from Workgroup to Domain — typed corp.local
+6. Entered domain admin credentials when prompted
+7. Restarted computer
+8. Logged in as jsmith — H: drive appeared automatically via GPO
+9. Verified Jane could access HR files successfully
+
+### Resolution
+New computer was not joined to the domain so Group Policy was not applying and H: drive mapping was not being pushed to the machine. Joining the computer 
+to corp.local resolved the issue — GPO applied automatically on next login.
+
+### What I Learned
+Any time a user gets a new computer and reports missing network drives or resources, check if the 
+computer is domain joined first. A computer not on the domain won't receive any GPOs, shared drives, 
+or domain resources. Joining to the domain is always one of the first steps when setting up a new employee 
+computer.
+
+Below is ticket being closed after I solved it,
+<img width="1115" height="895" alt="image" src="https://github.com/user-attachments/assets/3a222046-1201-45df-b2cf-2c2dd9ebc315" />
+
+
+
+
+
 
 
 
